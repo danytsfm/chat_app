@@ -1,0 +1,1 @@
+[{"email": "marie@gmail.com", "channel": "@original"}, {"email": "marie@gmail.com", "channel": "@project2"}, {"email": "joshua@gmail.com", "channel": "@project2"}, {"email": "joshua@gmail.com", "channel": "@original"}, {"email": "joshua@gmail.com", "channel": "@montreal"}, {"email": "marie@gmail.com", "channel": "@montreal"}]

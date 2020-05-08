@@ -1,0 +1,107 @@
+{% extends 'layout.html' %}
+{% block head %}
+  {{super()}}
+{% endblock %}
+{% block content %}
+<div>
+<div class="container" style="padding-top: 20px">
+   <div class="row">
+    <div class="col">
+    <label style="color:#ffffff; float:left; text-align:left;" id='display_name'>{{display_name}}</label>
+    <br>
+    <br>
+    <!-- Button trigger modal -->
+    <button type="button" id='callmodal' class="btnModal">
+      Add a channel
+      </button>
+      <div id='channels'>
+        {% for data in chn_list %}
+        <button class="btnChannels">{{data['new_channel']}}</button>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-md-auto" style="width:1000px; background-color: #ffffff; ">
+      <div><h3><b id='cha'>{{channel}}</b>
+        <button type="button" id='callmodalContact'><img src="static/images/person_add.svg" alt="add person"></button>
+      </h3>
+      <h4><b>{{original_welcome}}</b></h4>
+     </div>
+      <div id='messages'>
+      </div>
+      <h>
+    </div>
+  </div>
+</div>
+
+<div class="custom-padding">
+<div class="container" style="position:relative;">
+   <div class="row" >
+    <div class="col">
+    </div>
+    <div class="col-md-auto" style="width:1000px; border-radius: 5px;" ">
+      <h>
+      <form id='handle_messages' >
+        <div class="example" style="background-color:#ffffff;   border-radius: 5px;">
+            <div data-emojiarea data-type="unicode" data-global-picker="false" data-asset-path="static/images" data-anchor-alignment="right">
+            <div class="emoji-button"><img src="static/images/tag_faces-24px.svg" alt=""></div>
+            <input id='input-default' class="form-control" style="max-width:925px; border-radius: 5px" type="text"  autocomplete="off" autofocus placeholder="Type message">
+
+            </div>
+          </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+</div>
+
+
+<!-- Modal add channel -->
+<div class="modal" id="staticBackdrop">
+ <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel"><b>Create Channel</b></h5>
+      </div>
+      <div class="modal-body">
+        <label for="newChannel">Channel Name</label>
+        <input type="text" name="newChannel" id='newChannel' placeholder="Channel name">
+      </div>
+      <div class="modal-footer">
+        <button type="button" id='modalclose' class="btn btn-secondary">Close</button>
+        <button type="button" id='saveChannel' class="btn btn-success">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal add contact -->
+<div class="modal" id="staticContact">
+ <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticContactLabel"><b>Add people</b></h5>
+      </div>
+      <div class="modal-body">
+        <label for="addContact">email address</label>
+        <input type="text" name="addContact" id='addContact' placeholder="email address">
+      </div>
+      <div class="modal-footer">
+        <button type="button" id='modalContactclose' class="btn btn-secondary">Close</button>
+        <button type="button" id='saveContact' class="btn btn-success">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+<script>
+    $('#input-default').on('input textinput', function() {
+      // $('#value1').text($('#input-default').val());
+    });
+</script>
+
+{% endblock %}

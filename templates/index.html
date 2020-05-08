@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='style_.css')}}">
+    <title>Tonglais</title>
+</head>
+<body>
+  <div class="custom-padding">
+    <nav>
+      <div id="logo"><img src="static/images/logo_edit.png" href='index.html'></img></div>
+      <ul class="menu-area">
+        <a class="btn btn-outline-success"  href="{{url_for('login')}}" target="_self">sing in</a>
+        <a class="btn btn-danger" href="{{url_for('signup')}}" method='get' target="_self"> GET STARTED</a>
+      </ul>
+    </nav>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <div class="container">
+      <div class="row">
+       <div class="col">
+         <img src="static/images/connect_.jpg">
+       </div>
+       <div class="col">
+         <h1>We connect people!!</h1>
+         <h3>Create channels, invite team, keep the Workflow Flowing</h3>
+       </div>
+     </div>
+     </div>
+</body>
+</html>

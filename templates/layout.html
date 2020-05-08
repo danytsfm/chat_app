@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='reset.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <script src="{{url_for('static', filename='jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='jquery.emojiarea.js')}}"></script>
+    <script src="{{url_for('static', filename='main.js')}}"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_.css')}}">
+    <script src="{{ url_for('static', filename='home.js')}}"></script>
+    <title>Tonglais</title>
+
+
+  {% endblock %}
+</head>
+<body style="background-color: #204245;">
+  <div>
+    <div id='nav_area' >
+      <img src="static/images/logo_edit.png"></img>
+    </div>
+  <div id="content">
+      {% include 'includes/_messages.html' %}
+    {% block content %}
+    {% endblock %}
+  </div>
+  </div>
+
+</body>
+</html>

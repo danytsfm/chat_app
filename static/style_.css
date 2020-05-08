@@ -1,0 +1,82 @@
+.custom-padding{
+  padding-top: 5px;
+  padding-left: 0.5%;
+}
+
+#messages{
+    position: relative;
+    height:320px;
+    max-height: 320px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#nav_area{
+  position: relative;
+  padding:  10, 20px, 10px, 10px;
+  text-align: left;
+  z-index: l;
+  background: #8f9b9c;
+  margin: 0 auto;
+  width: calc(100%-60px);
+}
+nav{
+  position: relative;
+  padding: 10px, 20px, 10px, 10px;
+  text-align: right;
+  z-index: l;
+  background: #ffffff;
+  margin: 0 auto;
+}
+#logo{
+  float: left;
+  text-align: left;
+  padding:10px, 20px, 10px, 10px
+}
+
+.btnChannels {
+background-color: #204245;
+color: white;
+border: 0px;
+}
+.btnModal{
+  background-color: #204245;
+  color: white;
+  border: 0px;
+}
+
+
+.emoji-editor {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #d0d0d0;
+    padding: 15px;
+    font-size: 13px;
+    font-family: Helvetica, arial, sans-serif;
+    font-weight: normal;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-font-smoothing: antialiased;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+[data-emojiarea] {
+    position: relative;
+}
+
+[data-type="unicode"] > .emoji-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    user-select: none;
+}
+
+.example {
+    position: relative;
+}

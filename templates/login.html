@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% block head %}
+{{super()}}
+{% endblock %}
+{% block content %}
+<div class="container">
+  <br>
+  <br>
+  <div class="row justify-content-md-center">
+    <div class="col-md-auto" style="background-color:#ffffff">
+      <br>
+      <form name="LoginForm" action="/login", method="post">
+      <div class="form-group">
+        <label for="Email">Email address</label>
+        <input type="email" class="form-control" id="Email" name="email" autofocus aria-describedby="emailHelp" required>
+      </div>
+      <div class="form-group">
+       <label for="inputPassword6">Password</label>
+       <input type="password" id="password" name="password" class="form-control" aria-describedby="passwordHelpInline" required>
+      </div>
+      <button type="submit" class="btn btn-info">Sign in</button>
+   </form>
+   <br>
+  </div>
+ </div>
+</div><br>
+<div class="container" style="width:300px; font-size:11px; text-align: justify">
+<div class="row justify-content-md-center">
+  <div class="col-md-auto">
+ </div>
+</div>
+</div>
+
+{% endblock %}
